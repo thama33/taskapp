@@ -138,7 +138,7 @@
                     <navigationItem key="navigationItem" id="5PZ-QB-x22"/>
                     <connections>
                         <outlet property="contentsTextView" destination="YeG-h0-Gqm" id="zga-hG-gfe"/>
-                        <outlet property="dataPicker" destination="aYl-Yk-E1T" id="8qj-zt-S30"/>
+                        <outlet property="datePicker" destination="aYl-Yk-E1T" id="GNI-Xw-VMN"/>
                         <outlet property="titleTextField" destination="Oe8-O4-fvc" id="cGY-Qc-4RO"/>
                     </connections>
                 </viewController>
