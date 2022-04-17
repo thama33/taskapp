@@ -16,8 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-aa-oMI">
+                                <rect key="frame" x="10" y="98" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejW-u9-fOI">
+                                <rect key="frame" x="10" y="129" width="309" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5G-2Y-Xyg">
+                                <rect key="frame" x="329" y="129" width="75" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="kec-aR-jRR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="検索"/>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I03-R5-agd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="173" width="414" height="689"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="1aw-67-bjH" detailTextLabel="Vbv-Fl-AD5" style="IBUITableViewCellStyleSubtitle" id="aLl-w9-iV1">
@@ -50,9 +69,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I03-R5-agd" secondAttribute="bottom" id="FPS-Y8-Oei"/>
-                            <constraint firstItem="I03-R5-agd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cim-wZ-uqB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I03-R5-agd" secondAttribute="bottom" id="3Pw-zc-PRJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dbw-aa-oMI" secondAttribute="trailing" constant="10" id="966-UT-bQA"/>
+                            <constraint firstItem="Dbw-aa-oMI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MDq-16-XYv"/>
+                            <constraint firstItem="w5G-2Y-Xyg" firstAttribute="bottom" secondItem="ejW-u9-fOI" secondAttribute="bottom" id="Nkf-Av-uvc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w5G-2Y-Xyg" secondAttribute="trailing" constant="10" id="aBT-FH-wzJ"/>
+                            <constraint firstItem="ejW-u9-fOI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="be2-Z1-WOD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I03-R5-agd" secondAttribute="trailing" id="eVu-rb-WmZ"/>
+                            <constraint firstItem="ejW-u9-fOI" firstAttribute="top" secondItem="Dbw-aa-oMI" secondAttribute="bottom" constant="10" id="iO7-1F-Pm2"/>
+                            <constraint firstItem="w5G-2Y-Xyg" firstAttribute="top" secondItem="ejW-u9-fOI" secondAttribute="top" id="lKc-bL-bbW"/>
+                            <constraint firstItem="I03-R5-agd" firstAttribute="top" secondItem="ejW-u9-fOI" secondAttribute="bottom" constant="10" id="n11-2T-cew"/>
+                            <constraint firstItem="w5G-2Y-Xyg" firstAttribute="leading" secondItem="ejW-u9-fOI" secondAttribute="trailing" constant="10" id="rce-Qn-s5a"/>
+                            <constraint firstItem="Dbw-aa-oMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ssB-eS-qza"/>
                             <constraint firstItem="I03-R5-agd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yWb-YC-Fkx"/>
                         </constraints>
                     </view>
@@ -114,6 +142,19 @@
                                     <constraint firstAttribute="height" constant="120" id="nwH-N9-0a8"/>
                                 </constraints>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9e-Km-QUq">
+                                <rect key="frame" x="37" y="542" width="313" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQP-kL-mHA">
+                                <rect key="frame" x="172" y="486" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m8P-eF-HTi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,6 +178,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5PZ-QB-x22"/>
                     <connections>
+                        <outlet property="categoryTextField" destination="w9e-Km-QUq" id="pa8-2P-kL5"/>
                         <outlet property="contentsTextView" destination="YeG-h0-Gqm" id="zga-hG-gfe"/>
                         <outlet property="datePicker" destination="aYl-Yk-E1T" id="GNI-Xw-VMN"/>
                         <outlet property="titleTextField" destination="Oe8-O4-fvc" id="cGY-Qc-4RO"/>
@@ -144,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOS-PV-021" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="70"/>
+            <point key="canvasLocation" x="1737.68115942029" y="69.642857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pY2-TI-Wae">
