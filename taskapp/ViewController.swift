@@ -19,7 +19,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     //DB内のタスクが格納されるリスト
     //日付の近い順でソート：昇順
     //以降内容をアップデートするとリスト内は自動的に更新される。
-    var taskArray = try! Realm() .objects(Task.self).sorted(byKeyPath: "date",ascending: true)
+    var taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date",ascending: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,9 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        textField.text = nil
+        taskArray = realm.objects(Task.self).sorted(byKeyPath: "date",ascending: true)
         tableView.reloadData()
     }
 
@@ -120,7 +123,18 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     }
     
   
-
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func search(_ sender: Any) {
+        
+            
+        
+        let text = self.textField.text
+        taskArray = realm.objects(Task.self).filter("category == %@", text!).sorted(byKeyPath: "date",ascending: true)
+        tableView.reloadData()
+       
+        
+    }
     
 }
 
